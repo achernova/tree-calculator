@@ -1,0 +1,115 @@
+'use strict';
+
+const optionList = document.querySelector('[data-list]');
+const option = document.querySelectorAll('.tree__type-item');
+
+const selectDiametr = document.querySelector('[data-list-diametr]');
+const weightM3 = document.querySelector('[data-weight-m3]');
+const crown = document.querySelector('[data-crown]');
+const trunk = document.querySelector('[data-trunk]');
+const total = document.querySelector('[data-total]');
+
+fetch('data.json')
+.then(response => response.json())
+.then(data => {
+
+  optionList.addEventListener('change', function() {
+    const selectedText = optionList.options[optionList.selectedIndex].text;
+    let selectedTree = selectedText;
+
+    data.data.forEach(item => {
+      if (selectedTree === item.name) {
+        weightM3.textContent = item.weight;
+      }
+    });
+  });
+})
+.catch(error => console.error('Ошибка:', error));
+
+fetch('tree.json')
+.then(response => response.json())
+.then(data => {
+  const tree = data["tree-data"]["тополь"];
+  const trees = data["tree-data"];
+
+
+  
+  const getTree = () => {
+    if (trees) {
+      Object.keys(trees).forEach(treeType => {
+        const treeName = treeType;
+        console.log(treeName);
+      });
+    }
+  }
+
+  getTree();
+
+  const getTreeDataByDiameter = (diameter) => {
+    if (tree[diameter]) {
+      const stvol = tree[diameter]["ствол"];
+      const krona = tree[diameter]["крона"];
+      const obshiy = tree[diameter]["общий"];
+      
+      return { stvol, krona, obshiy };
+    } else {
+      return null;
+    }
+  }
+
+  selectDiametr.addEventListener('change', function() {
+    const selectedDiam = selectDiametr.options[selectDiametr.selectedIndex].text;
+    const diametrData = getTreeDataByDiameter(selectedDiam);
+
+    if (diametrData) {
+      total.textContent = diametrData.obshiy;
+      trunk.textContent = diametrData.stvol;
+      crown.textContent = diametrData.krona;
+    } else {
+      total.textContent = 'Диаметр не найден';
+    }
+  });
+})
+.catch(error => console.error('Ошибка:', error));
+
+
+// Функция для получения данных по диаметру
+// function getTreeDataByDiameter(diameter) {
+//   const tree = treeData["tree-data"]["тополь"];
+//   if (tree[diameter]) {
+//     const stvol = tree[diameter]["ствол"];
+//     const krona = tree[diameter]["крона"];
+//     const obshiy = tree[diameter]["общий"];
+    
+//     return { stvol, krona, obshiy };
+//   } else {
+//     return null; // если диаметр не найден
+//   }
+// }
+
+// // Пример использования
+// const diameter = 24; // выбранный пользователем диаметр
+// const result = getTreeDataByDiameter(diameter);
+
+// if (result) {
+//   console.log(`Ствол: ${result.stvol}`);
+//   console.log(`Крона: ${result.krona}`);
+//   console.log(`Общий: ${result.obshiy}`);
+// } else {
+//   console.log("Данные для указанного диаметра не найдены.");
+// }
+
+
+  // console.log("Имя:", data.data[0].name);
+  // console.log("Вес:", data.data[0].weight);
+  // const treeName = data.data[0].name;
+  // const treeWeight = data.data[0].weight;
+
+// const trunk20 = treeDiameters['20'].trunk;
+  // const crown20 = treeDiameters['20'].crown;
+  // const total20 = treeDiameters['20'].total;
+
+  // console.log(treeName)
+  // console.log(treeWeight)
+  // console.log(treeDiameters)
+  // console.log(total20)

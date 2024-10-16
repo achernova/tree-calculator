@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree counter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="visually-hidden">tree counter</h1>
+      <div class="container">
+        <section class="tree">
+          <div class="tree__selection">
+            <div class="tree__type">
+              <p>Выберите тип дерева</p>
+              <select class="tree__type-list" data-list>
+                <option class="tree__type-item" value="0"></option>
+                <option class="tree__type-item" value="1">Тополь</option>
+                <option class="tree__type-item" value="2">Сосна</option>
+                <option class="tree__type-item" value="3">Берёза</option>
+                <option class="tree__type-item" value="4">Ольха</option>
+                <option class="tree__type-item" value="5">Дуб</option>
+                <option class="tree__type-item" value="6">Клён</option>
+                <option class="tree__type-item" value="7">Ясень</option>
+                <option class="tree__type-item" value="8">Ильм</option>
+                <option class="tree__type-item" value="9">Вяз</option>
+                <option class="tree__type-item" value="10">Липа</option>
+                <option class="tree__type-item" value="11">Рябина</option>
+                <option class="tree__type-item" value="12">Яблоня</option>
+                <option class="tree__type-item" value="13">Бук</option>
+                <option class="tree__type-item" value="15">Лиственница</option>
+                <option class="tree__type-item" value="16">Осина</option>
+                <option class="tree__type-item" value="17">Каштан</option>
+                <option class="tree__type-item" value="18">Груша</option>
+                <option class="tree__type-item" value="19">Ива</option>
+                <option class="tree__type-item" value="20">Ель</option>
+                <option class="tree__type-item" value="21">Верба</option>
+                <option class="tree__type-item" value="22">Орех лесной</option>
+                <option class="tree__type-item" value="23">Пихта</option>
+                <option class="tree__type-item" value="23">Акация</option>
+              </select>
+            </div>
+            <div class="tree__diametr">
+              <p>Выберите диаметр</p>
+              <select class="tree__type-list" data-list-diametr>
+                <option class="tree__type-item" value="0"></option>
+                <option class="tree__type-item" value="1">8</option>
+                <option class="tree__type-item" value="2">12</option>
+                <option class="tree__type-item" value="3">16</option>
+                <option class="tree__type-item" value="4">20</option>
+                <option class="tree__type-item" value="5">24</option>
+                <option class="tree__type-item" value="6">28</option>
+                <option class="tree__type-item" value="7">32</option>
+                <option class="tree__type-item" value="8">36</option>
+                <option class="tree__type-item" value="9">40</option>
+                <option class="tree__type-item" value="10">44</option>
+                <option class="tree__type-item" value="11">48</option>
+                <option class="tree__type-item" value="12">52</option>
+                <option class="tree__type-item" value="13">56</option>
+                <option class="tree__type-item" value="15">60</option>
+                <option class="tree__type-item" value="16">64</option>
+                <option class="tree__type-item" value="17">68</option>
+                <option class="tree__type-item" value="18">72</option>
+                <option class="tree__type-item" value="19">76</option>
+                <option class="tree__type-item" value="20">80</option>
+                <option class="tree__type-item" value="21">84</option>
+                <option class="tree__type-item" value="22">88</option>
+                <option class="tree__type-item" value="23">92</option>
+                <option class="tree__type-item" value="23">96</option>
+                <option class="tree__type-item" value="23">100</option>
+                <option class="tree__type-item" value="23">104</option>
+                <option class="tree__type-item" value="23">108</option>
+                <option class="tree__type-item" value="23">112</option>
+                <option class="tree__type-item" value="23">116</option>
+                <option class="tree__type-item" value="23">120</option>
+              </select>
+            </div>
+          </div>
+          <div class="tree__result">
+            <div class="tree__volume">
+              <div class="tree__block">
+                <p>Крона, м3</p>
+                <span data-crown></span>
+              </div>
+              <div class="tree__block">
+                <p>Ствол, м3</p>
+                <span data-trunk></span>
+              </div>
+              <div class="tree__block">
+                <p>Общий, м3</p>
+                <span data-total></span>
+              </div>
+            </div>
+            <div class="tree__weight">
+              <div class="tree__block">
+                <p>Плотность кг/м3</p>
+                <span data-weight-m3></span>
+              </div>
+              <div class="tree__block">
+                <p>Вес всего кг</p>
+                <span data-kg></span>
+              </div>
+              <div class="tree__block">
+                <p>Вес всего тонн</p>
+                <span data-tonn></span>
+              </div>
+
+            </div>
+          </div>
+          
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
