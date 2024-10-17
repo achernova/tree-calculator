@@ -12,6 +12,10 @@ const totalBox = document.querySelector('[data-total]');
 const totalKilogram = document.querySelector('[data-kg]');
 const totalTonn = document.querySelector('[data-tonn]');
 
+const dataError = document.querySelector('[data-error]');
+
+const clearBtn = document.querySelector('[data-clear]');
+
 let selectedTreeWeight;
 let selectedTreeCub;
 
@@ -56,24 +60,30 @@ fetch('tree.json')
         const weightKg = diametrData.total * selectedTree.weight;
         totalKilogram.textContent = weightKg.toFixed(2);
         totalTonn.textContent = (weightKg / 1000).toFixed(3);
+
+        dataError.textContent = ''
       } else {
-        clearResults();
+        clearResults()
       }
 
     } else {
-      clearResults();
+      clearResults()
     }
 
   });
 
   function clearResults() {
-    totalBox.textContent = 'Данные не найдены';
+    totalBox.textContent = '';
     trunkBox.textContent = '';
     crownBox.textContent = '';
+    totalTonn.textContent = '';
+    totalKilogram.textContent = '';
+    weightM3.textContent = '';
+    dataError.textContent = 'Данные не найдены';
   }
 
   function populateDiameterOptions(diameters) {
-    selectDiametr.innerHTML = '<option value="">Выберите диаметр</option>'; // Добавляем пустую опцию
+    selectDiametr.innerHTML = '<option value=""> </option>';
     Object.keys(diameters)
       .sort((a, b) => Number(a) - Number(b))
       .forEach(diameter => {
@@ -82,7 +92,23 @@ fetch('tree.json')
         option.textContent = diameter;
         selectDiametr.appendChild(option);
       });
-  }
+  };
+
+  function clearData() {
+    totalBox.textContent = '';
+    trunkBox.textContent = '';
+    crownBox.textContent = '';
+    totalTonn.textContent = '';
+    totalKilogram.textContent = '';
+    dataError.textContent = '';
+    weightM3.textContent = '';
+    selectDiametr.value = 0;
+    optionList.value = 0;
+  };
+
+  clearBtn.addEventListener('click', function(e) {
+    clearData();
+  });
 })
 .catch(error => console.error('Ошибка:', error));
 

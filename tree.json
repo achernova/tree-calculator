@@ -349,6 +349,41 @@
       "116": {"trunk": 11.06, "crown": 5.35, "total": 16.41},
       "120": {"trunk": 11.93, "crown": 5.91, "total": 17.84}
       }
+    },
+    {
+      "name": "Ива",
+      "weight": 425,
+      "diametr": {
+        "8": {"trunk": 0.04, "crown": 0.16, "total": 0.20},
+        "12": {"trunk": 0.10, "crown": 0.32, "total": 0.42},
+        "16": {"trunk": 0.19, "crown": 0.55, "total": 0.74},
+        "20": {"trunk": 0.31, "crown": 0.83, "total": 1.14},
+        "24": {"trunk": 0.47, "crown": 1.16, "total": 1.63},
+        "28": {"trunk": 0.65, "crown": 1.52, "total": 2.17},
+        "32": {"trunk": 0.88, "crown": 1.95, "total": 2.83},
+        "36": {"trunk": 1.14, "crown": 2.41, "total": 3.55},
+        "40": {"trunk": 1.43, "crown": 2.92, "total": 4.35},
+        "44": {"trunk": 1.76, "crown": 3.47, "total": 5.23},
+        "48": {"trunk": 2.13, "crown": 4.06, "total": 6.19},
+        "52": {"trunk": 2.54, "crown": 4.71, "total": 7.25},
+        "56": {"trunk": 2.99, "crown": 5.39, "total": 8.38},
+        "60": {"trunk": 3.48, "crown": 6.11, "total": 9.59},
+        "64": {"trunk": 4.01, "crown": 6.87, "total": 10.88},
+        "68": {"trunk": 4.58, "crown": 7.67, "total": 12.25},
+        "72": {"trunk": 5.19, "crown": 8.51, "total": 13.70},
+        "76": {"trunk": 5.84, "crown": 9.39, "total": 15.23},
+        "80": {"trunk": 6.54, "crown": 10.30, "total": 16.84},
+        "84": {"trunk": 7.28, "crown": 11.30, "total": 18.58},
+        "88": {"trunk": 8.06, "crown": 12.30, "total": 20.36},
+        "92": {"trunk": 8.88, "crown": 13.30, "total": 22.18},
+        "96": {"trunk": 9.75, "crown": 14.40, "total": 24.15},
+        "100": {"trunk": 10.70, "crown": 15.50, "total": 26.20},
+        "104": {"trunk": 11.60, "crown": 16.60, "total": 28.20},
+        "108": {"trunk": 12.60, "crown": 17.80, "total": 30.40},
+        "112": {"trunk": 14.80, "crown": 20.30, "total": 35.10},
+        "116": {"trunk": 15.90, "crown": 21.60, "total": 37.50},
+        "120": {"trunk": 17.10, "crown": 22.90, "total": 40.00}
+      }
     }
   ]
 }
