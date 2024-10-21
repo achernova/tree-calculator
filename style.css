@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Roboto';
   font-weight: 400;
   font-style: normal;
@@ -16,7 +16,7 @@
   src: 
     url('../fonts/Robotocondensedbold.woff2') format('woff2'), 
     url('../fonts/Robotocondensedbold.woff') format('woff');
-}
+} */
 
 *,
 *::before,
