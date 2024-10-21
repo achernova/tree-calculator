@@ -123,7 +123,8 @@ input:matches([type="email"],
 }
 
 .tree__result {
-  padding: 20px 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
@@ -145,6 +146,10 @@ input:matches([type="email"],
   border: 1px solid #085e1e;
   border-radius: 5px;
   background-color: #ffffff;
+}
+
+.tree__result span:hover {
+  outline: 1px solid #085e1e;
 }
 
 .tree__type,
@@ -192,7 +197,7 @@ input:matches([type="email"],
   min-height: 30px;
   border: 1px solid #085e1e;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #a6a7a9;
   outline: none;
   cursor: pointer;
   user-select: none;
@@ -246,14 +251,22 @@ input:matches([type="email"],
   }
 
   .tree__result p {
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   .tree__block {
     margin-bottom: 5px;
   }
 
-  .tree__block p {
-    font-size: 20px;
+  .tree__btn {
+    width: 100%;
+  }
+
+  .tree__result span {
+    font-size: 15px;
+  }
+
+  .tree__error {
+    font-size: 15px;
   }
 }
